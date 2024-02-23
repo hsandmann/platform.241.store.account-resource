@@ -43,11 +43,12 @@ public class AccountModel {
     }
     
     public Account to() {
-        return new Account()
+        return Account.builder()
             .id(id)
             .name(name)
             .email(email)
-            .hash(hash);
+            .hash(hash)
+            .build();
     }
     
 }
