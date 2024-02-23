@@ -26,13 +26,13 @@ public class AccountModel {
     @Column(name = "id_account")
     private String id;
 
-    @Column(name = "name")
+    @Column(name = "tx_name")
     private String name;
 
-    @Column(name = "email")
+    @Column(name = "tx_email")
     private String email;
 
-    @Column(name = "hash")
+    @Column(name = "tx_hash")
     private String hash;
 
     public AccountModel(Account o) {
