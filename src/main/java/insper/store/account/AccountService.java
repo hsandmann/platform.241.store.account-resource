@@ -8,6 +8,8 @@ import java.util.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import lombok.NonNull;
+
 @Service
 public class AccountService {
 
@@ -20,7 +22,7 @@ public class AccountService {
         return accountRepository.save(new AccountModel(in)).to();
     }
 
-    public Account read(String id) {
+    public Account read(@NonNull String id) {
         return accountRepository.findById(id).map(AccountModel::to).orElse(null);
     }
 
