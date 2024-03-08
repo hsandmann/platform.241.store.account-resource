@@ -74,5 +74,14 @@ public class AccountResource implements AccountController {
         }
         return ResponseEntity.ok(AccountParser.to(account));
     }
+
+    @Override
+    public ResponseEntity<AccountOut> read(String idUser, String roleUser) {
+        final AccountOut account = AccountOut.builder()
+            .id(idUser)
+            .name(roleUser)
+            .build();
+        return ResponseEntity.ok(account);
+    }
     
 }
