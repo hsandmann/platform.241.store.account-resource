@@ -17,6 +17,13 @@ spring:
       hibernate:
         default_schema: account
 
+management:
+  endpoints:
+    web:
+      base-path: /accounts/actuator
+      exposure:
+        include: [ 'prometheus' ]
+
 eureka:
   client:
     register-with-eureka: true
